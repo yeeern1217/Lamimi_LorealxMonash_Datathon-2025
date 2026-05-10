@@ -1,7 +1,7 @@
 import streamlit as st
 import time
 import os
-from src.nl2sql_agentic import chat_with_db
+from src.backend.nl2sql_agentic import chat_with_db
 
 def chatbot_page():
     # --- Load CSS ---

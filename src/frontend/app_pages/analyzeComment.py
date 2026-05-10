@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import re
 import os
-from src.youtube_scrapper import scrape_video
-from src.report_generator import generate_pdf_report, generate_video_summary
+from src.backend.youtube_scrapper import scrape_video
+from src.backend.report_generator import generate_pdf_report, generate_video_summary
 
 def comment_senser_page():
     # --- Load CSS ---

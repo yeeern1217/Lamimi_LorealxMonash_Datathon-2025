@@ -1,6 +1,6 @@
 import streamlit as st
 import os
-from src.powerbi_utils import render_powerbi, generate_insights
+from src.backend.powerbi_utils import render_powerbi, generate_insights
 
 def dashboard_page():
     # --- Load CSS ---

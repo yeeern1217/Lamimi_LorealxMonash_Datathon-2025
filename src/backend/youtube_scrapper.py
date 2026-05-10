@@ -8,11 +8,11 @@ from urllib.parse import urlparse, parse_qs
 from googleapiclient.discovery import build
 from dotenv import load_dotenv
 import emoji
-from src.spam_detector import SpamDetector
-from src.relevance_check import RelevanceChecker
-from src.sentiment_analysis import SentimentAnalyzer
-from src.compute_actionability import ActionabilityProcessor
-from src.prod_cat_clustering import ProductClustering
+from src.backend.spam_detector import SpamDetector
+from src.backend.relevance_check import RelevanceChecker
+from src.backend.sentiment_analysis import SentimentAnalyzer
+from src.backend.compute_actionability import ActionabilityProcessor
+from src.backend.prod_cat_clustering import ProductClustering
 import numpy as np
 load_dotenv()
 API_KEY = os.getenv("YOUTUBE_API_KEY")

@@ -1,37 +1,25 @@
-import streamlit as st
-from streamlit_option_menu import option_menu
-from app_pages.chatbot import chatbot_page
-from app_pages.dashboard import dashboard_page
-from app_pages.analyzeComment import comment_senser_page    
+#!/usr/bin/env python
+"""
+Entry point for the CommentSense application.
+This script runs the Streamlit frontend.
+"""
+import subprocess
+import sys
+import os
 
-# --- Page Config ---
-st.set_page_config(
-    page_title="L'ORÉAL CommentSense",
-    layout="wide",
-    menu_items={
-        'About': "This is the website for L'ORÉAL Datathon."
-    }
-)
-
-with st.sidebar:
-    st.image("assets/logo-removebg.png", use_container_width=True)
-
-    # Navigation menu
-    selected = option_menu(
-        menu_title="Main Menu",
-        options=["Insights Hub", "Chat Assistant", "Comment Senser"],
-        icons=["lightbulb", "robot", "chat-dots"],
-        menu_icon="list",
-        default_index=0,
-    )
-
-if selected == "Insights Hub":
-    dashboard_page()
+def main():
+    """Run the Streamlit frontend."""
+    # Path to the frontend main.py
+    frontend_main = os.path.join(os.path.dirname(__file__), "src", "frontend", "main.py")
     
-elif selected == "Chat Assistant":
-    chatbot_page()
-    
-elif selected == "Comment Senser":
-    comment_senser_page()
+    # Run streamlit
+    subprocess.run([
+        sys.executable,
+        "-m",
+        "streamlit",
+        "run",
+        frontend_main
+    ])
 
-
+if __name__ == "__main__":
+    main()
