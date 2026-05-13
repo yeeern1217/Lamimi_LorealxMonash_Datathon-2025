@@ -1,9 +1,10 @@
+import os
+
 import streamlit as st
 from streamlit_option_menu import option_menu
-from app_pages.chatbot import chatbot_page
-from app_pages.dashboard import dashboard_page
-from app_pages.analyzeComment import comment_senser_page    
-import os
+from src.frontend.app_pages.analyzeComment import comment_senser_page
+from src.frontend.app_pages.chatbot import chatbot_page
+from src.frontend.app_pages.dashboard import dashboard_page
 
 # Get the directory of this script
 frontend_dir = os.path.dirname(os.path.abspath(__file__))

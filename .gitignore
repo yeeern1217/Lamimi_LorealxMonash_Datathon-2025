@@ -1,34 +1,3 @@
-# Byte-compiled / optimized / DLL files
 __pycache__/
-*.py[cod]
-*$py.class
-
-# Virtual environment folders
-venv/
-env/
-
-# Distribution / packaging
-build/
-dist/
-*.egg-info/
-
-# PyInstaller
-*.manifest
-*.spec
-
-# Jupyter Notebook checkpoints
-.ipynb_checkpoints
-
-# Logs
-*.log
-
-# IDE settings
-.vscode/
-.idea/
-
-# System files
-.DS_Store
-Thumbs.db
-
-# Python requirements
-*.env
+.env
+.venv/
